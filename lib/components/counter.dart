@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// State provider for the counter
-// final countProvider = StateProvider<int>((ref) => 0);
-
 class Counter extends ConsumerWidget {
   const Counter({super.key});
 
