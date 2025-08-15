@@ -135,6 +135,7 @@ class RegisterState extends State<UserRegister> {
                     onChanged: (value) {
                       handleErrors('', 'mobileErr');
                     },
+                    maxLength: 10,
                     errors: errors['mobileErr'],
                   ),
                   SizedBox(height: 20),

@@ -10,6 +10,7 @@ class Input extends StatelessWidget {
   final Function(String)? onChanged;
   final VoidCallback? onPressed;
   final String? errors;
+  final int? maxLength;
 
   const Input({
     super.key,
@@ -22,6 +23,7 @@ class Input extends StatelessWidget {
     this.onChanged,
     this.onPressed,
     this.errors,
+    this.maxLength,
   });
 
   @override
@@ -32,6 +34,7 @@ class Input extends StatelessWidget {
         obscureText: secureText,
         keyboardType: keyboardType,
         onChanged: onChanged,
+        maxLength: maxLength,
         textAlignVertical: TextAlignVertical.center,
         decoration: InputDecoration(
           prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,

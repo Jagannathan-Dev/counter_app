@@ -116,7 +116,7 @@ class LoginState extends State<UserLogin> {
                   ),
                   SizedBox(height: 30),
                   Input(
-                    placeholder: 'Username',
+                    placeholder: 'Mobile Number',
                     prefixIcon: Icons.person,
                     controller: userName,
                     onChanged: (value) {
