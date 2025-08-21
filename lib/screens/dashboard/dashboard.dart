@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:counter_app/components/counter.dart';
 import 'package:counter_app/constants/colors.dart';
+import 'package:counter_app/constants/imgReq.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -76,8 +77,8 @@ class CounterState extends State<Dashboard> {
                             SizedBox(width: 10),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(100),
-                              child: Image.network(
-                                'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-moh-adbelghaffar-771742.jpg&fm=jpg',
+                              child: Image.asset(
+                                imgReq['flutter'],
                                 width: 50,
                                 height: 50,
                                 fit: BoxFit.cover,
@@ -90,7 +91,16 @@ class CounterState extends State<Dashboard> {
                   ),
                 ),
               ),
-              Expanded(child: Counter()),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: MediaQuery.of(context).size.height,
+                    ),
+                    child: Counter(),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

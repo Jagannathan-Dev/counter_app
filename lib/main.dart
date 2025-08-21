@@ -55,7 +55,7 @@ class _TokenState extends State<CheckToken> {
     if (token == null || token.isEmpty) {
       Navigator.pushReplacementNamed(context, '/login_index');
     } else {
-      Navigator.pushReplacementNamed(context, '/counter');
+      Navigator.pushReplacementNamed(context, '/dashboard');
     }
   }
 

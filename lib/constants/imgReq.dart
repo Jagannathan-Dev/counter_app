@@ -3,4 +3,5 @@ const Map<String, dynamic> imgReq = {
   "login": 'assets/images/login.png',
   "index": 'assets/images/index.png',
   "bgImg": 'assets/images/bgImg.jpg',
+  "flutter": 'assets/images/flutter.jpg',
 };

@@ -19,15 +19,17 @@ class Counter extends ConsumerWidget {
             child: Text(
               '$count',
               style: GoogleFonts.montserrat(
-                fontSize: MediaQuery.of(context).size.width - 200,
+                fontSize: MediaQuery.of(context).size.width * 0.5,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
 
           // Buttons
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Wrap(
+            spacing: 10,
+            runSpacing: 5,
+            alignment: WrapAlignment.center,
             children: [
               ButtonGradient(
                 'Decrement',

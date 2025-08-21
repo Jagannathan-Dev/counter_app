@@ -78,10 +78,13 @@ class LoginState extends State<UserLogin> {
     return Scaffold(
       backgroundColor: WhiteColor,
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.all(20),
-          child: Center(
-            child: SingleChildScrollView(
+        child: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height,
+            ),
+            child: Container(
+              padding: EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
